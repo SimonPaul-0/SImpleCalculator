@@ -2,23 +2,25 @@
 
 ## Overview
 
-This Python program is a basic calculator that allows users to perform arithmetic operations on a set of 5 numbers. It supports addition (+), subtraction (-), multiplication (*), modulus (%), and division (/) operations.
+This Python program is a basic calculator that allows users to perform arithmetic operations on a set of numbers. It supports addition (+), subtraction (-), multiplication (*), modulus (%), and division (/) operations.
 
 ## How to Use
 
 1. Run the program by executing the Python script (`calculator.py`).
 
-2. Enter a set of 5 numbers when prompted.
+2. Enter the number of values you want to perform calculations on.
 
-3. Choose an arithmetic operation (+, -, *, %, /).
+3. Enter the set of numbers as prompted.
 
-4. View the result of the operation.
+4. Choose an arithmetic operation (+, -, *, %, /).
 
-5. Decide whether to perform another calculation with the same set of numbers.
+5. View the result of the operation.
 
-6. If you wish to enter a new set of 5 numbers, choose 'Y' when prompted.
+6. Decide whether to perform another calculation with the same set of numbers.
 
-7. Repeat steps 3-6 until you decide not to continue.
+7. If you wish to enter a new set of numbers, choose 'Y' when prompted.
+
+8. Repeat steps 3-7 until you decide not to continue.
 
 ## Notes
 

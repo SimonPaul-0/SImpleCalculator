@@ -20,7 +20,8 @@ def calculate_result(num_list, operator):
         return result
 
 def main():
-    num_list = [int(input(f'Enter number {i + 1}: ')) for i in range(5)]
+    num_count = int(input('Enter the number of values: '))
+    num_list = [int(input(f'Enter number {i + 1}: ')) for i in range(num_count)]
 
     while True:
         operator = input('Enter the operator you want to use (+, -, *, %, /): ')
@@ -37,3 +38,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

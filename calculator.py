@@ -1,38 +1,56 @@
-def calculate_result(num_list, operator):
-    if operator == '+':
-        return sum(num_list)
-    elif operator == '-':
-        return num_list[0] - sum(num_list[1:])
-    elif operator == '*':
-        result = 1
-        for num in num_list:
-            result *= num
+import re
+
+def calculate(expression):
+    """
+    Evaluate a mathematical expression with basic operators: +, -, *, %, and /.
+
+    Parameters:
+    - expression (str): Mathematical expression to be evaluated.
+
+    Returns:
+    - The result of the calculation or an error message.
+    """
+    try:
+        # Validate expression
+        if not re.match(r'^[0-9+\-*/%() ]+$', expression):
+            raise ValueError("Invalid characters in the expression.")
+
+        # Resolve parentheses first
+        while '(' in expression:
+            match = re.search(r'\([^()]+\)', expression)
+            if match:
+                sub = match.group(0)[1:-1]
+                sub_result = calculate(sub)
+                expression = expression.replace(match.group(0), str(sub_result))
+
+        # Perform calculation
+        result = eval(expression)
         return result
-    elif operator == '%':
-        return num_list[0] % num_list[1]
-    elif operator == '/':
-        result = num_list[0]
-        for num in num_list[1:]:
-            if num != 0:
-                result /= num
-            else:
-                return "Cannot divide by zero"
-        return result
+    except ZeroDivisionError:
+        return "Error: Division by zero"
+    except Exception as e:
+        return f"Error: {str(e)}"
 
 def main():
-    num_count = int(input('Enter the number of values: '))
-    num_list = [int(input(f'Enter number {i + 1}: ')) for i in range(num_count)]
-
+    """
+    Main function to take user input and perform calculations.
+    """
     while True:
-        operator = input('Enter the operator you want to use (+, -, *, %, /): ')
+        expr = input('Enter a mathematical expression: ')
 
-        result = calculate_result(num_list, operator)
-        if isinstance(result, str):
-            print(f"Error: {result}")
+        res = calculate(expr)
+        if isinstance(res, str):
+            print(res)
         else:
-            print(f'The result of the operation is: {result}')
+            print(f'Result of the expression: {res}')
 
-        choice = input('Do you want to perform another calculation? (Y/N): ')
+        inter_choice = input('Want to see an intermediate result? (Y/N): ')
+        if inter_choice.upper() == 'Y':
+            inter_expr = input('Enter an intermediate expression: ')
+            inter_res = calculate(inter_expr)
+            print(f'Intermediate result: {inter_res}')
+
+        choice = input('Perform another calculation? (Y/N): ')
         if choice.upper() != 'Y':
             break
 

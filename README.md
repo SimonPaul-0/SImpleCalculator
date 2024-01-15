@@ -1,3 +1,5 @@
+---
+
 # Calculator Program
 
 ## Overview
@@ -28,6 +30,11 @@ This Python program is a basic calculator that allows users to perform arithmeti
 
 - The program is designed to be interactive and user-friendly.
 
+## Contributions
+
+If you'd like to contribute to this project, feel free to fork the repository, make your changes, and submit a pull request. Feel free to contribute, report issues, or customize the program based on your specific project details.Bug fixes, feature enhancements, and code improvements are welcome.
 ## Author
 
 [Simon Paul]
+
+---

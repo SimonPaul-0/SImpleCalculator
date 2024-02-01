@@ -4,11 +4,11 @@
 
 ## Overview
 
-This Python program is a basic calculator that allows users to perform arithmetic operations on a set of numbers. It supports addition (+), subtraction (-), multiplication (*), modulus (%), and division (/) operations.
+This C# program is a basic calculator that allows users to perform arithmetic operations on a set of numbers. It supports addition (+), subtraction (-), multiplication (*), modulus (%), and division (/) operations.
 
 ## How to Use
 
-1. Run the program by executing the Python script (`calculator.py`).
+1. Compile and run the program by executing the C# source code (`Calculator.cs`).
 
 2. Enter the number of values you want to perform calculations on.
 
@@ -32,7 +32,7 @@ This Python program is a basic calculator that allows users to perform arithmeti
 
 ## Contributions
 
-If you'd like to contribute to this project, feel free to fork the repository, make your changes, and submit a pull request. Feel free to contribute, report issues, or customize the program based on your specific project details.Bug fixes, feature enhancements, and code improvements are welcome.
+If you'd like to contribute to this project, feel free to fork the repository, make your changes, and submit a pull request. Bug fixes, feature enhancements, and code improvements are welcome!
 ## Author
 
 [Simon Paul]
